@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>reCAPTCHA</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <form id="captcha-form">
+      <div class="g-recaptcha"
+           data-sitekey="6Lf1p4ErAAAAACQRRK8IXAemvgJwSLsU5CTZqu3O"
+           data-callback="onRecaptchaSuccess">
+      </div>
+    </form>
+
+    <script>
+      function onRecaptchaSuccess(token) {
+        javaApp.onSuccess(token); // JavaFX will call this
+      }
+    </script>
+  </body>
+</html>

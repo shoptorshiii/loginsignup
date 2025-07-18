@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    function onCaptchaSuccess(token) {
+      if (window.javaApp && typeof window.javaApp.onSuccess === 'function') {
+        window.javaApp.onSuccess(token);
+      }
+    }
+  </script>
+</head>
+<body style="margin: 0; padding: 5px;">
+  <div class="g-recaptcha"
+       data-sitekey="6Lf1p4ErAAAAACQRRK8IXAemvgJwSLsU5CTZqu3O"
+       data-callback="onCaptchaSuccess">
+  </div>
+</body>
+</html>
